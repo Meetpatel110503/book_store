@@ -16,7 +16,7 @@ import {
   FormControl,
 } from "@mui/material"
 import { fetchBooks } from "../redux/action/BookSlice"
-import Loader from "./Loader"
+import Loader from "../components/Loader"
 
 const Home = () => {
   const dispatch = useDispatch()

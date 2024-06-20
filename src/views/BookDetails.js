@@ -12,7 +12,7 @@ import {
   CardMedia,
 } from "@mui/material"
 import { addToCart } from "../redux/action/CartSlice"
-import Loader from "./Loader"
+import Loader from "../components/Loader"
 import { toast } from "react-toastify"
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import { UserContext } from "../context/userContext"

@@ -29,7 +29,6 @@ const Profile = () => {
     updateUser(newDetails)
     toast.success("Profile updated successfully")
     setOpenEdit(false)
-    localStorage.setItem("users", JSON.stringify(newDetails))
   }
 
   const handleChangePassword = () => {
