@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Login from "./auth/Login"
+import Signup from "./auth/Signup"
+import { ToastContainer } from "react-toastify"
+import { UserProvider } from "./context/userContext"
+import "react-toastify/dist/ReactToastify.css"
+import Home from "./components/Home"
+import BookDetails from "./components/BookDetails"
+import Cart from "./components/Cart"
+import Navbar from "./components/Navbar"
+import Checkout from "./components/Checkout"
+import Profile from "./components/ProfilePage"
+import ProtectedRoute from "./components/ProtectedRoute"
+import Error from "./components/ErrorPage"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <UserProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path='*' element={<Error />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/books/:id' element={<BookDetails />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/login' element={<Login />} />
+            <Route
+              path='/cart'
+              element={<ProtectedRoute element={<Cart />} />}
+            />
+            <Route
+              path='/profile'
+              element={<ProtectedRoute element={<Profile />} />}
+            />
+            <Route
+              path='/checkout'
+              element={<ProtectedRoute element={<Checkout />} />}
+            />
+          </Routes>
+        </BrowserRouter>
+      </UserProvider>
+      <ToastContainer
+        position='top-right'
+        autoClose={700}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme='colored'
+      />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
