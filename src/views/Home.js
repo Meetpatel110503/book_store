@@ -104,7 +104,7 @@ const Home = () => {
           component='h1'
           sx={{ fontWeight: "bold", mb: 2 }}
         >
-          ALL BOOKS
+          📚 ALL BOOKS
         </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={3}>

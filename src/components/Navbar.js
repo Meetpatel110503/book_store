@@ -72,7 +72,7 @@ const Navbar = () => {
             <>
               <Button color='inherit'>
                 <Link
-                  to='/'
+                  to='/home'
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   Home
@@ -122,12 +122,21 @@ const Navbar = () => {
             <>
               <Button color='inherit'>
                 <Link
+                  to='/home'
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  Home
+                </Link>
+              </Button>
+              <Button color='inherit'>
+                <Link
                   to='/login'
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   Login
                 </Link>
               </Button>
+
               <Button color='inherit'>
                 <Link
                   to='/signup'
@@ -152,7 +161,7 @@ const Navbar = () => {
               <>
                 <MenuItem onClick={handleMenuClose}>
                   <Link
-                    to='/'
+                    to='/home'
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
                     Home
@@ -207,6 +216,14 @@ const Navbar = () => {
               </>
             ) : (
               <>
+                <MenuItem onClick={handleMenuClose}>
+                  <Link
+                    to='/home'
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Home
+                  </Link>
+                </MenuItem>
                 <MenuItem onClick={handleMenuClose}>
                   <Link
                     to='/login'

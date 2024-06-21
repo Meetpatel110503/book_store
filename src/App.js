@@ -12,6 +12,7 @@ import Checkout from "./components/Checkout"
 import Profile from "./views/ProfilePage"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Error from "./components/ErrorPage"
+import LandingPage from "./components/LandingPage"
 
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='*' element={<Error />} />
-            <Route path='/' element={<Home />} />
+            <Route path='/home' element={<Home />} />
             <Route path='/books/:id' element={<BookDetails />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/' element={<LandingPage />} />
             <Route
               path='/cart'
               element={<ProtectedRoute element={<Cart />} />}
