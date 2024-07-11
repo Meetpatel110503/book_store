@@ -43,7 +43,7 @@ const Checkout = () => {
         </Typography>
       </Box>
       <Box textAlign='center' mt={3}>
-        <Link to='/' style={styles.link}>
+        <Link to='/home' style={styles.link}>
           Go to Home Page....
         </Link>
       </Box>

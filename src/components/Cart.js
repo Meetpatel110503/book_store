@@ -55,7 +55,7 @@ const Cart = () => {
     <Container>
       <Box sx={{ mt: 4, mb: 4 }}>
         <Typography variant='h4' component='h1' sx={{ fontWeight: "bold" }}>
-          Cart
+          🛒 Cart
         </Typography>
         <Divider sx={{ my: 2 }} />
         {cartItems.length === 0 ? (

@@ -35,7 +35,7 @@ const Login = () => {
     }
     loginUser(user)
     reset()
-    navigate("/")
+    navigate("/home")
     toast.success("Login successfully")
   }
 

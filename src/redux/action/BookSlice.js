@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
-import { getBook, getBooks } from "../../api"
+import axios from "axios"
 
 const initialState = {
   books: [],
@@ -8,15 +8,17 @@ const initialState = {
   error: null,
 }
 
+const API_URL = "https://freetestapi.com/api/v1/books"
+
 export const fetchBooks = createAsyncThunk("books/fetchBooks", async () => {
-  const response = await getBooks()
+  const response = await axios.get(`${API_URL}`)
   return response.data
 })
 
 export const fetchBookDetails = createAsyncThunk(
   "books/fetchBookDetails",
   async (id) => {
-    const response = await getBook(id)
+    const response = await axios.get(`${API_URL}/${id}`)
     return response.data
   }
 )
