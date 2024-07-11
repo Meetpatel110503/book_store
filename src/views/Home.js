@@ -139,7 +139,7 @@ const Home = () => {
                 label='Publish Year'
               >
                 <MenuItem value=''>
-                  <em>None</em>
+                  <em>All</em>
                 </MenuItem>
                 {[...new Set(books.map((book) => book.publication_year))].map(
                   (year) => (
@@ -153,7 +153,7 @@ const Home = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <FormControl variant='outlined' fullWidth>
-              <InputLabel>Genre</InputLabel>
+              <InputLabel>All</InputLabel>
               <Select value={genre} onChange={handleGenreChange} label='Genre'>
                 <MenuItem value=''>
                   <em>None</em>
