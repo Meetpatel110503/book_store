@@ -13,6 +13,8 @@ import Profile from "./views/ProfilePage"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Error from "./components/ErrorPage"
 import LandingPage from "./components/LandingPage"
+import "./global.css"
+
 
 function App() {
   return (
